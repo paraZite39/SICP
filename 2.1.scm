@@ -1,0 +1,7 @@
+(define (make-rat n d)
+  (cond ((= d 0) (display "Cannot divide by 0") (newline))
+        ((= n 0) 0)
+        ((> n -1) (cond ((> d 0) (cons n d))
+                      ((< d 0) (cons (- n) (- d)))))
+        ((< n 0) (cond ((> d 0) (cons n d))
+                      ((< d 0) (cons (- n) (- d)))))))
